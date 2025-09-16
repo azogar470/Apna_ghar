@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h1 class="text-center">Add Room</h1>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">
+          <h2 class="mb-0">Create a New Listing</h2>
+        </div>
+        <div class="card-body color-dark">
+          <form method="post" enctype="multipart/form-data">
+            
+            {% csrf_token %}
+
+            <div class="mb-3"> 
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="contact" class="form-label">Contact Information</label>
+              <input type="text" class="form-control" id="contact" name="contact" placeholder="e.g., Phone number or email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="price" class="form-label">Price ($)</label>
+                <div class="input-group">
+                   <span class="input-group-text">$</span>
+                   <input type="number" class="form-control" id="price" name="price" min="0" step="0.01" required>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" required>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark btn-lg">Upload Item</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

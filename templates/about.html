@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% load static %} {% block title %}About Us{% endblock title %} {% block content %}
+
+<div class="container mt-5 mb-5">
+  <div class="row text-center mb-4">
+    <div class="col">
+      <h1 class="display-3">About the Creator & The Platform</h1>
+    </div>
+  </div>
+
+  <hr class="my-5" />
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-8">
+      <h2>Developed by</h2>
+      <p>
+        <strong>Ashutosh Patil</strong>, a full-stack software developer with a
+        passion for building innovative and user-friendly web applications. With
+        a strong background in Python, Django, and modern JavaScript frameworks,
+        I specialize in turning complex problems into elegant, efficient
+        solutions.
+      </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQGOI45GVUNKVw/profile-displayphoto-shrink_400_400/B56Zie5oSmG4Ag-/0/1755012565689?e=1761177600&v=beta&t=PZ3HTJuZU0DSFNLR6Fq8ogBvnpsQXijtLd38sFaa2uc"
+        class="img-fluid rounded-circle shadow"
+        alt="A portrait of the developer"
+        style="width: 220px; height: 220px; object-fit: cover"
+      />
+    </div>
+  </div>
+
+  <hr class="my-5" />
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-4 text-center">
+      <img
+        src="https://i.ibb.co/Jwt1HBw5/logo.png"
+        class="img-fluid"
+        alt="Platform Logo"
+        style="max-width: 200px"    
+      />
+    </div>
+    <div class="col-md-8">
+      <p>
+        <strong>ApnaGhar</strong> was created to solve a specific challenge:
+        <strong
+          >the need for a comprehensive platform that connects individuals with
+          available living options for students and office goings.</strong
+        >. Our mission is to provide a ,powerful intuitive, and reliable tool
+        for <strong>home seekers</strong> to
+        <strong>find their ideal living spaces effortlessly</strong>.
+      </p>
+    </div>
+  </div>
+
+  <hr class="my-5" />
+
+  <div class="row text-center">
+    <div class="col">
+      <h2>Connect With Me</h2>
+      <p class="lead">
+        I'm always open to connecting with like-minded individuals. <br />
+        You can find my work and professional profile below.
+      </p>
+      <div class="mt-4">
+        <a
+          href="https://github.com/azogar470"
+          target="_blank"
+          class="text-dark mx-3"
+          aria-label="GitHub Profile"
+          title="GitHub"
+        >
+          <i class="fab fa-github fa-3x social-icon"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ashutosh-patil-7aa85620b/"
+          target="_blank"
+          class="text-primary mx-3"
+          aria-label="LinkedIn Profile"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin fa-3x social-icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .social-icon {
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+  }
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #0056b3; /* A different color on hover */
+  }
+  .fa-github:hover {
+    color: #333 !important; /* Specific hover color for GitHub icon */
+  }
+  .fa-linkedin:hover {
+    color: #0a66c2 !important; /* Specific hover color for LinkedIn icon */
+  }
+</style>
+
+{% endblock content %}
